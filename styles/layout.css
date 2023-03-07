@@ -1,0 +1,49 @@
+body > header {
+    height: 194px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > header > ul {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#month-carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+
+#month-carousel section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.month-info {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+#month {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+}

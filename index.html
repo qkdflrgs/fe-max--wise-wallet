@@ -12,8 +12,16 @@
     <!-- 상단 배너 -->
     <header>
         <ul>
-            <li>Wise Wallet</li>
-            <li>2023년 2월 February</li>
+            <li id="logo">Wise Wallet</li>
+            <li id="month-carousel">
+                <button><</button>
+                <section>
+                    <p class="month-info">2023</p>
+                    <p id="month">2</p>
+                    <p class="month-info">February</p>
+                </section>
+                <button>></button>
+            </li>
             <li>nav-tabs</li>
         </ul>
     </header>
@@ -21,7 +29,7 @@
     <!-- 본문 -->
     <main>
         <!-- 새로운 내역 입력바 -->
-        <section>
+        <section class="overlap-content">
             <form action="">
                 <label for="date">일자</label>
                 <input type="text" id="date">
@@ -58,7 +66,7 @@
         <!-- 수입지출 내역 -->
         <section>
             <!-- 당월 내역 요약 -->
-            <header>
+            <header id="monthly-info">
                 <h2>전체 내역 x건</h2>
                 <ul>
                     <li>
