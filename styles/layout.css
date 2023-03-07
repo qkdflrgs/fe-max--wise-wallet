@@ -30,7 +30,12 @@ body > header > ul {
     width: 20%;
 }
 
-#month-carousel section {
+#month-carousel > a {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#month-carousel > section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,4 +64,29 @@ body > header > ul {
     text-align: center;
     vertical-align: middle;
     margin: 10px;
+}
+
+main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    position: relative;
+}
+
+.overlap-bar {
+    height: 76px;
+    width: max-content;
+    display: flex;
+    position: relative;
+    bottom: 38px;
+    background: #FCFCFC;
+    border: 1px solid #524D90;
+    box-shadow: 0px 2px 2px rgba(82, 77, 144, 0.08), 0px 4px 4px rgba(82, 77, 144, 0.1);
+    border-radius: 8px;
+}
+
+.overlap-bar form {
+    align-self: center;
 }
