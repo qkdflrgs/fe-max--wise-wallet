@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise-Wallet</title>
+</head>
+<body>
+    <!-- 상단 배너 -->
+    <header>
+        <ul>
+            <li>Wise Wallet</li>
+            <li>2023년 2월 February</li>
+            <li>nav-tabs</li>
+        </ul>
+    </header>
+
+    <!-- 본문 -->
+    <main>
+        <!-- 새로운 내역 입력바 -->
+        <section>
+            <form action="">
+                <label for="date">일자</label>
+                <input type="text" id="date">
+
+                <label for="price">금액</label>
+                <button>-</button>
+                <input type="text" id="price">
+
+                <label for="content">내용</label>
+                <input type="text" id="content">
+
+                <label for="payment-type">결제수단</label>
+                <select name="paymentType" id="payment-type">
+                    <option value="">선택하세요</option>
+                    <option value="cash">현금</option>
+                    <option value="credit-card">신용카드</option>
+                </select>
+
+                <label for="category">분류</label>
+                <select name="" id="category">
+                    <option value="">선택하세요</option>
+                    <option value="life">생활</option>
+                    <option value="food">식비</option>
+                    <option value="traffic">교통</option>
+                    <option value="shopping">쇼핑/뷰티</option>
+                    <option value="medical">의료/건강</option>
+                    <option value="culture">문화/여가</option>
+                    <option value="etc">미분류</option>
+                </select>
+                <input type="submit" value="✔" disabled>
+            </form>
+        </section>
+    
+        <!-- 수입지출 내역 -->
+        <section>
+            <!-- 당월 내역 요약 -->
+            <header>
+                <h2>전체 내역 x건</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="" id="">
+                        <span>수입 금액</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="">
+                        <span>지출 금액</span>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- 일별 내역 -->
+            <section>
+                <ul>
+                    <li>
+                        <article>
+                            <header>
+                                <h4>월일</h4>
+                                <ul>
+                                    <li>수입: 금액</li>
+                                    <li>지출: 금액</li>
+                                </ul>
+                            </header>
+                            <section>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header>
+                                <h4>월일</h4>
+                                <ul>
+                                    <li>수입: 금액</li>
+                                    <li>지출: 금액</li>
+                                </ul>
+                            </header>
+                            <section>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header>
+                                <h4>월일</h4>
+                                <ul>
+                                    <li>수입: 금액</li>
+                                    <li>지출: 금액</li>
+                                </ul>
+                            </header>
+                            <section>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                        <tr>
+                                            <td>분류</td>
+                                            <td>내용</td>
+                                            <td>결제수단</td>
+                                            <td>금액</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
