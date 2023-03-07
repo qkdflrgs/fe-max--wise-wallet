@@ -3,6 +3,8 @@ body > header {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #524D90;
+    color: #FCFCFC;
 }
 
 body > header > ul {
@@ -46,4 +48,15 @@ body > header > ul {
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+}
+
+#nav-tabs {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav-tabs a {
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
 }
