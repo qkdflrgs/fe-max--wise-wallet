@@ -1,0 +1,94 @@
+@import url(variables.css);
+
+/* 메인 페이지 헤더 */
+.page-header {
+    height: 194px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.page-header > section {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 메인페이지 헤더 월 carousel */
+.header__month-carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.header__month-carousel > button {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button--transparent {
+    background-color: transparent;
+    border: none;
+}
+
+.header__month-carousel--current {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__month-carousel--current > p {
+    font-family: var(--font-family-bold);
+    font-style: normal;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-bold-regular);
+}
+
+.header__month-carousel--current > p:nth-child(2) {
+    font-family: var(--font-family-display);
+    font-style: normal;
+    font-weight: var(--font-weight-display-large);
+    font-size: var(--font-size-display-large);
+}
+
+.header__nav--tabs {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__nav--tabs a {
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    position: relative;
+}
+
+.input-bar__wrapper {
+    height: 76px;
+    width: max-content;
+    display: flex;
+    position: relative;
+    bottom: 38px;
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    box-shadow: 0px 2px 2px rgba(82, 77, 144, 0.08), 0px 4px 4px rgba(82, 77, 144, 0.1);
+    border-radius: 8px;
+}
+
+.input-bar__wrapper form {
+    align-self: center;
+}
