@@ -10,26 +10,28 @@
 </head>
 <body>
     <!-- 메인 페이지 헤더 -->
-    <header>
-        <ul>
-            <li class="header__logo">
-                <a href=""><img src="./images/Logo.svg" alt="로고"></a>
-            </li>
-            <li class="header__month-carousel">
-                <a href=""><img src="./images/chevron-left.svg" alt="이전 달로 이동"></a>
+    <header class="page-header">
+        <section>
+            <img class="header__logo" src="./images/Logo.svg" alt="로고">
+    
+            <section class="header__month-carousel">
+                <button type="button" class="button--transparent"><img src="./images/chevron-left.svg" alt="이전 달로 이동 버튼"></button>
                 <section class="header__month-carousel--current">
                     <p>2023</p>
                     <p>2</p>
                     <p>February</p>
                 </section>
-                <a href=""><img src="./images/chevron-right.svg" alt="다음 달로 이동"></a>
-            </li>
-            <li class="header__nav">
-                <a href=""><img src="./images/doc.svg" alt="수입지출 내역으로 이동"></a>
-                <a href=""><img src="./images/calendar.svg" alt="달력으로 이동"></a>
-                <a href=""><img src="./images/chart.svg" alt="차트로 이동"></a>
-            </li>
-        </ul>
+                <button type="button" class="button--transparent"><img src="./images/chevron-right.svg" alt="다음 달로 이동 버튼"></button>
+            </section>
+    
+            <nav class="header__nav">
+                <ul class="header__nav--tabs">
+                    <li><a href=""><img src="./images/doc.svg" alt="수입지출 내역으로 이동 버튼"></a></li>
+                    <li><a href=""><img src="./images/calendar.svg" alt="달력으로 이동 버튼"></a></li>
+                    <li><a href=""><img src="./images/chart.svg" alt="차트로 이동 버튼"></a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
 
     <!-- 본문 -->
