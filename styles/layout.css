@@ -1,11 +1,13 @@
+@import url(variables.css);
+
 /* 메인 페이지 헤더 */
 body > header {
     height: 194px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #524D90;
-    color: #FCFCFC;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 body > header > ul {
@@ -18,10 +20,10 @@ body > header > ul {
 
 /* 메인페이지 헤더 로고 */
 .header__logo {
-    font-family: 'Outfit';
+    font-family: var(--font-family-display);
     font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: var(--font-weight-display-small);
+    font-size: var(--font-size-display-small);
 }
 
 /* 메인페이지 헤더 월 carousel */
@@ -45,17 +47,17 @@ body > header > ul {
 }
 
 .header__month-carousel--current > p {
-    font-family: 'Pretendard';
+    font-family: var(--font-family-bold);
     font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-bold-regular);
 }
 
 .header__month-carousel--current > p:nth-child(2) {
-    font-family: 'Outfit';
+    font-family: var(--font-family-display);
     font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
+    font-weight: var(--font-weight-display-large);
+    font-size: var(--font-size-display-large);
 }
 
 #nav {
@@ -84,8 +86,8 @@ main {
     display: flex;
     position: relative;
     bottom: 38px;
-    background: #FCFCFC;
-    border: 1px solid #524D90;
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
     box-shadow: 0px 2px 2px rgba(82, 77, 144, 0.08), 0px 4px 4px rgba(82, 77, 144, 0.1);
     border-radius: 8px;
 }
