@@ -57,22 +57,26 @@
     font-size: var(--font-size-display-large);
 }
 
+
+/* 헤더 네비게이션 탭 */
 .header__nav--tabs {
     display: flex;
     flex-direction: row;
 }
 
-.header__nav--tabs a {
-    text-align: center;
-    vertical-align: middle;
+.header__nav--tabs > div {
     margin: 10px;
+}
+
+input[type=radio] {
+    display: none;
 }
 
 .tab-icon {
     filter: invert(75%) sepia(14%) saturate(739%) hue-rotate(210deg) brightness(88%) contrast(78%);
 }
 
-.tab-icon--active {
+input[type=radio]:checked + label > .tab-icon {
     filter: invert(99%) sepia(2%) saturate(54%) hue-rotate(210deg) brightness(122%) contrast(98%);
 }
 

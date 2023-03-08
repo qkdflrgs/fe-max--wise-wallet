@@ -29,32 +29,38 @@
         </section>
 
         <nav class="header__nav">
-          <ul class="header__nav--tabs">
-            <li>
-              <a href="#"
-                ><img
-                  class="tab-icon tab-icon--active"
-                  src="./images/doc.svg"
-                  alt="수입지출 내역으로 이동 버튼"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  class="tab-icon"
-                  src="./images/calendar.svg"
-                  alt="달력으로 이동 버튼"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  class="tab-icon"
-                  src="./images/chart.svg"
-                  alt="차트로 이동 버튼"
-              /></a>
-            </li>
-          </ul>
+          <fieldset class="header__nav--tabs">
+            <div>
+              <input type="radio" name="nav-tab" id="main-page-tab" checked />
+							<label for="main-page-tab">
+								<img
+									class="tab-icon"
+									src="./images/doc.svg"
+									alt="수입지출 내역으로 이동 버튼"
+								/>
+							</label>
+            </div>
+            <div>
+              <input type="radio" name="nav-tab" id="calendar-page-tab" />
+							<label for="calendar-page-tab">
+								<img
+									class="tab-icon"
+									src="./images/calendar.svg"
+									alt="달력으로 이동 버튼"
+								/>
+							</label>
+            </div>
+            <div>
+              <input type="radio" name="nav-tab" id="chart-page-tab" />
+							<label for="chart-page-tab">
+								<img
+									class="tab-icon"
+									src="./images/chart.svg"
+									alt="차트로 이동 버튼"
+								/>
+							</label>
+            </div>
+          </fieldset>
         </nav>
       </section>
     </header>
