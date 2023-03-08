@@ -9,22 +9,22 @@
     <link rel="stylesheet" href="./styles/layout.css">
 </head>
 <body>
-    <!-- 상단 배너 -->
+    <!-- 메인 페이지 헤더 -->
     <header>
         <ul>
-            <li id="logo">
+            <li class="header__logo">
                 <a href=""><img src="./images/Logo.svg" alt="로고"></a>
             </li>
-            <li id="month-carousel">
+            <li class="header__month-carousel">
                 <a href=""><img src="./images/chevron-left.svg" alt="이전 달로 이동"></a>
-                <section>
-                    <p class="month-info">2023</p>
-                    <p id="month">2</p>
-                    <p class="month-info">February</p>
+                <section class="header__month-carousel--current">
+                    <p>2023</p>
+                    <p>2</p>
+                    <p>February</p>
                 </section>
                 <a href=""><img src="./images/chevron-right.svg" alt="다음 달로 이동"></a>
             </li>
-            <li id="nav-tabs">
+            <li class="header__nav">
                 <a href=""><img src="./images/doc.svg" alt="수입지출 내역으로 이동"></a>
                 <a href=""><img src="./images/calendar.svg" alt="달력으로 이동"></a>
                 <a href=""><img src="./images/chart.svg" alt="차트로 이동"></a>
@@ -35,7 +35,7 @@
     <!-- 본문 -->
     <main>
         <!-- 새로운 내역 입력바 -->
-        <section class="overlap-bar">
+        <section class="input-bar__wrapper">
             <form action="">
                 <label for="date">일자</label>
                 <input type="text" id="date">

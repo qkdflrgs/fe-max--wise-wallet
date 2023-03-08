@@ -1,3 +1,4 @@
+/* 메인 페이지 헤더 */
 body > header {
     height: 194px;
     display: flex;
@@ -15,14 +16,16 @@ body > header > ul {
     align-items: center;
 }
 
-#logo {
+/* 메인페이지 헤더 로고 */
+.header__logo {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
 }
 
-#month-carousel {
+/* 메인페이지 헤더 월 carousel */
+.header__month-carousel {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,37 +33,37 @@ body > header > ul {
     width: 20%;
 }
 
-#month-carousel > a {
+.header__month-carousel > a {
     text-align: center;
     vertical-align: middle;
 }
 
-#month-carousel > section {
+.header__month-carousel--current {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.month-info {
+.header__month-carousel--current > p {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
 }
 
-#month {
+.header__month-carousel--current > p:nth-child(2) {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
 }
 
-#nav-tabs {
+#nav {
     display: flex;
     flex-direction: row;
 }
 
-#nav-tabs a {
+#nav a {
     text-align: center;
     vertical-align: middle;
     margin: 10px;
@@ -75,7 +78,7 @@ main {
     position: relative;
 }
 
-.overlap-bar {
+.input-bar__wrapper {
     height: 76px;
     width: max-content;
     display: flex;
@@ -87,6 +90,6 @@ main {
     border-radius: 8px;
 }
 
-.overlap-bar form {
+.input-bar__wrapper form {
     align-self: center;
 }
