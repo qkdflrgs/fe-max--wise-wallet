@@ -115,6 +115,10 @@
     color: var(--color-primary-alt);
 }
 
+.font_secred {
+    color: var(--color-secondary-red);
+}
+
 .icon_small {
     height: 24px;
     width: 24px;
@@ -263,4 +267,86 @@
     background-color: var(--color-primary-alt-40);
     border: none;
     border-radius: 8px;
+}
+
+#info_list {
+    width: 848px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 286px;
+}
+
+#list_category, #list_income, #list_expense{
+    display: flex;
+    align-items: center;
+}
+
+#list_expense {
+    margin-left: 14px;
+}
+
+.check_box {
+    margin-right: 10px;
+}
+
+#list_month {
+    width: 846px;
+    position: absolute;
+    top: 346px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contents_title {
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags {
+    height: 32px;
+    width: 92px;
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category_culture {
+    background-color: var(--color-category-pink);
+}
+
+.category_transportation {
+    background-color: var(--color-category-mint);
+}
+
+.contents_main {
+    height: 64px;
+    width: 846px;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--color-primary-alt-40);
+    border-bottom: 1px solid var(--color-primary-alt-40);
+}
+
+.contents_description {
+    margin-left: 16px;
+    width: 320px;
+    text-align: left;
+}
+
+.contents_payment {
+    margin-left: 16px;
+    width: 120px;
+}
+
+.contents_money {
+    margin-left: 16px;
+    width: 234px;
+    text-align: right;
 }
