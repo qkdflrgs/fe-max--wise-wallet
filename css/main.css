@@ -68,6 +68,14 @@
     margin: 10px;
 }
 
+.tab-icon {
+    filter: invert(75%) sepia(14%) saturate(739%) hue-rotate(210deg) brightness(88%) contrast(78%);
+}
+
+.tab-icon--active {
+    filter: invert(99%) sepia(2%) saturate(54%) hue-rotate(210deg) brightness(122%) contrast(98%);
+}
+
 main {
     width: 60%;
     display: flex;
