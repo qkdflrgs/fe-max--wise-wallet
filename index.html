@@ -35,7 +35,7 @@
     <form id="input_bar">
         <div id="bar_date" class="input_section">
             <label for="input_date" class="input_title bold_regular font_alt">일자</label>
-            <input id="input_date" class="input_box body_regular font_primary" type="text" value="20230307">
+            <input id="input_date" class="input_box body_regular font_primary" type="number" value="20230307">
         </div>
         <div class="line"></div>
         <div id="bar_amount" class="input_section">
@@ -71,5 +71,46 @@
             <img id="btn_icon" class="icon_small" src="src/check_icon.png" alt="">
         </button>
     </form>
+    <div id="info_list">
+        <div id="list_title">
+            <span id="title_content" class="body_large font_primary">전체 내역 13건</span>
+        </div>
+        <div id="list_category" class="body_medium font_primary">
+            <div id="list_income">
+                <img class="check_box icon_small" src="src/checkbox_icon.png" alt="">
+                <span id="income_amount">수입 2,010,580</span>
+            </div>
+            <div id="list_expense">
+                <img class="check_box icon_small" src="src/checkbox_icon.png" alt="">
+                <span id="expense_amount">지출 798,180</span>
+            </div>
+        </div>
+    </div>
+    <section id="list_month">
+        <div id="list_20230215" class="list_contents">
+            <div class="contents_title">
+                <div class="contents_date">
+                    <span class="bold_medium font_primary">2월 15일</span>
+                    <span class="bold_medium font_alt">수</span>
+                </div>
+                <div class="contents_amount">
+                    <span class="bold_medium font_alt">지출</span>
+                    <span class="bold_medium font_alt">56,240원</span>
+                </div>
+            </div>
+            <div class="contents_main">
+                <div class="tags category_culture font_white bold_medium">문화/여가</div>
+                <span class="contents_description body_medium font_primary">스트리밍 서비스 정기 결제</span>
+                <span class="contents_payment body_medium font_alt">현대카드</span>
+                <span class="contents_money body_medium font_secred">-10,900원</span>
+            </div>
+            <div class="contents_main">
+                <div class="tags category_transportation font_white bold_medium">교통</div>
+                <span class="contents_description body_medium font_primary">후불 교통비 결제</span>
+                <span class="contents_payment body_medium font_alt">현대카드</span>
+                <span class="contents_money body_medium font_secred">-45,340원</span>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
