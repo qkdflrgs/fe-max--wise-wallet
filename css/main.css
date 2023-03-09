@@ -158,7 +158,7 @@ select {
 }
 
 .input-bar__input-wrapper select {
-    width: 100px;
+  width: 100px;
 }
 
 .input-bar__input-wrapper--price > div {
@@ -188,7 +188,7 @@ select {
 }
 
 .input-bar__input-wrapper #input-category + .input-bar__dropdown-panel {
-    width: 148px;
+  width: 148px;
 }
 
 .dropdown-panel__option {
@@ -220,11 +220,11 @@ select {
 }
 
 .dropdown-panel__button--delete {
-    width: 16px;
-    height: 16px;
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
 }
 
 .dropdown-panel__button--delete img {
@@ -239,4 +239,70 @@ select {
   justify-content: stretch;
   align-items: stretch;
   opacity: 0.4;
+}
+
+/* 수입지출 내역 요약(헤더) */
+.transaction__container {
+  position: relative;
+  top: 16px;
+  width: 100%;
+}
+
+.transaction__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction__header h2 {
+    font-family: var(--font-family-bold);
+    font-weight: var(--font-weight-body);
+    font-size: var(--font-size-body-large);
+    line-height: var(--line-height-body-large);
+    color: var(--color-primary);
+}
+
+.transaction__total-amount-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px
+}
+
+.transaction__total-amount {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.transaction__total-amount-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.transaction__total-amount-item {
+    font-family: var(--font-family-bold);
+    font-weight: var(--font-weight-body);
+    font-size: var(--font-size-body-medium);
+    line-height: var(--line-height-body-regular);
+    color: var(--color-primary);
+}
+
+/* 수입지출 체크박스 */
+
+.transaction__total-amount-checkbox input[type=checkbox] {
+    display: none;
+}
+
+.transaction__total-amount-checkbox input[type=checkbox] + label {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/uncheckbox.svg) no-repeat center;
+}
+
+.transaction__total-amount-checkbox input[type=checkbox]:checked + label {
+    background: url(../images/checkbox.svg) no-repeat center;
 }

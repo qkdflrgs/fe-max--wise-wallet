@@ -133,7 +133,7 @@
             </section>
 
             <!-- 결제수단 드롭다운 패널 -->
-            <div class="input-bar__dropdown-panel">
+            <!-- <div class="input-bar__dropdown-panel">
               <ul>
                 <li class="dropdown-panel__option">
                   <div class="dropdown-panel__option--content">
@@ -157,7 +157,7 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </article>
 
           <!-- 분류 선택 -->
@@ -178,7 +178,7 @@
               </select>
 
               <!-- 분류 드롭다운 패널 -->
-              <div class="input-bar__dropdown-panel">
+              <!-- <div class="input-bar__dropdown-panel">
                 <ul>
                   <li class="dropdown-panel__option">
                     <div class="dropdown-panel__option--content">
@@ -216,7 +216,7 @@
                     </div>
                   </li>
                 </ul>
-              </div>
+              </div> -->
             </section>
             <button class="button--transparent input-bar__check-button">
               <img src="./images/checkbox.svg" alt="내역 입력 확인" />
@@ -226,20 +226,32 @@
       </section>
 
       <!-- 수입지출 내역 -->
-      <section>
+      <section class="transaction__container">
         <!-- 당월 내역 요약 -->
-        <header id="monthly-info">
-          <h2>전체 내역 x건</h2>
-          <ul>
-            <li>
-              <input type="checkbox" name="" id="" />
-              <span>수입 금액</span>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="" />
-              <span>지출 금액</span>
-            </li>
-          </ul>
+        <header class="transaction__header">
+          <h2>전체 내역 13건</h2>
+          <section class="transaction__total-amount-wrapper">
+            <div class="transaction__total-amount">
+              <div class="transaction__total-amount-checkbox">
+                <input type="checkbox" name="income-check" id="income-check" checked />
+                <label for="income-check"></label>
+              </div>
+              <div class="transaction__total-amount-item">
+                <p>수입</p>
+                <p>2,010,580</p>
+              </div>
+            </div>
+            <div class="transaction__total-amount">
+              <div class="transaction__total-amount-checkbox">
+                <input type="checkbox" name="spending-check" id="spending-check" checked />
+                <label for="spending-check"></label>
+              </div>
+              <div class="transaction__total-amount-item">
+                <p>지출</p>
+                <p>798,180</p>
+              </div>
+            </div>
+          </section>
         </header>
 
         <!-- 일별 내역 -->
