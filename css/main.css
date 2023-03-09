@@ -11,7 +11,7 @@
 }
 
 .page-header > section {
-  width: 60%;
+  width: 846px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -19,15 +19,15 @@
 }
 
 /* 메인페이지 헤더 월 carousel */
-.header__month-carousel {
+.page-header__month-carousel {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 20%;
+  width: 232px;
 }
 
-.header__month-carousel > button {
+.page-header__month-carousel > button {
   text-align: center;
   vertical-align: middle;
 }
@@ -38,33 +38,38 @@
   padding: 0;
 }
 
-.header__month-carousel--current {
+.page-header__month-carousel--current {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header__month-carousel--current > p {
+.page-header__month-carousel--current > p {
   font-family: var(--font-family-bold);
   font-style: normal;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-bold-regular);
 }
 
-.header__month-carousel--current > p:nth-child(2) {
+.page-header__month-carousel--current > p:nth-child(2) {
   font-family: var(--font-family-display);
   font-style: normal;
   font-weight: var(--font-weight-display-large);
   font-size: var(--font-size-display-large);
 }
 
+.page-header__month-carousel--button-icon {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(54%)
+    hue-rotate(210deg) brightness(122%) contrast(98%);
+}
+
 /* 헤더 네비게이션 탭 */
-.header__nav--tabs {
+.page-header__nav--tabs {
   display: flex;
   flex-direction: row;
 }
 
-.header__nav--tabs > div {
+.page-header__nav--tabs > div {
   margin: 10px;
 }
 
@@ -137,14 +142,15 @@ main {
 }
 
 .input-bar__input-wrapper label {
-    font-family: var(--font-family-body);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-bold-regular);
-    line-height: var(--line-height-bold-regular);
-    color: var(--color-primary-alt);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-bold-regular);
+  line-height: var(--line-height-bold-regular);
+  color: var(--color-primary-alt);
 }
 
-.input-bar__input-wrapper input, select {
+.input-bar__input-wrapper input,
+select {
   border: none;
   height: 24px;
 }
