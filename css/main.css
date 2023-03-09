@@ -96,6 +96,7 @@ main {
   position: relative;
 }
 
+/* 내역 입력바 */
 .input-bar__container {
   height: 76px;
   width: max-content;
