@@ -73,11 +73,11 @@ input[type=radio] {
 }
 
 .tab-icon {
-    filter: invert(75%) sepia(14%) saturate(739%) hue-rotate(210deg) brightness(88%) contrast(78%);
+    filter: brightness(0) saturate(100%) invert(75%) sepia(14%) saturate(739%) hue-rotate(210deg) brightness(88%) contrast(78%);
 }
 
 input[type=radio]:checked + label > .tab-icon {
-    filter: invert(99%) sepia(2%) saturate(54%) hue-rotate(210deg) brightness(122%) contrast(98%);
+    filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(54%) hue-rotate(210deg) brightness(122%) contrast(98%);
 }
 
 main {
