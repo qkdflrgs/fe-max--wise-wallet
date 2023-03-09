@@ -16,7 +16,11 @@
 
         <section class="page-header__month-carousel">
           <button type="button" class="button--transparent">
-            <img class="page-header__month-carousel--button-icon" src="./images/chevron-left.svg" alt="이전 달로 이동 버튼" />
+            <img
+              class="page-header__month-carousel--button-icon"
+              src="./images/chevron-left.svg"
+              alt="이전 달로 이동 버튼"
+            />
           </button>
           <section class="page-header__month-carousel--current">
             <p>2023</p>
@@ -24,7 +28,11 @@
             <p>February</p>
           </section>
           <button type="button" class="button--transparent">
-            <img class="page-header__month-carousel--button-icon" src="./images/chevron-right.svg" alt="다음 달로 이동 버튼" />
+            <img
+              class="page-header__month-carousel--button-icon"
+              src="./images/chevron-right.svg"
+              alt="다음 달로 이동 버튼"
+            />
           </button>
         </section>
 
@@ -32,33 +40,33 @@
           <fieldset class="page-header__nav--tabs">
             <div>
               <input type="radio" name="nav-tab" id="main-page-tab" checked />
-							<label for="main-page-tab">
-								<img
-									class="tab-icon"
-									src="./images/doc.svg"
-									alt="수입지출 내역으로 이동 버튼"
-								/>
-							</label>
+              <label for="main-page-tab">
+                <img
+                  class="tab-icon"
+                  src="./images/doc.svg"
+                  alt="수입지출 내역으로 이동 버튼"
+                />
+              </label>
             </div>
             <div>
               <input type="radio" name="nav-tab" id="calendar-page-tab" />
-							<label for="calendar-page-tab">
-								<img
-									class="tab-icon"
-									src="./images/calendar.svg"
-									alt="달력으로 이동 버튼"
-								/>
-							</label>
+              <label for="calendar-page-tab">
+                <img
+                  class="tab-icon"
+                  src="./images/calendar.svg"
+                  alt="달력으로 이동 버튼"
+                />
+              </label>
             </div>
             <div>
               <input type="radio" name="nav-tab" id="chart-page-tab" />
-							<label for="chart-page-tab">
-								<img
-									class="tab-icon"
-									src="./images/chart.svg"
-									alt="차트로 이동 버튼"
-								/>
-							</label>
+              <label for="chart-page-tab">
+                <img
+                  class="tab-icon"
+                  src="./images/chart.svg"
+                  alt="차트로 이동 버튼"
+                />
+              </label>
             </div>
           </fieldset>
         </nav>
@@ -70,36 +78,52 @@
       <!-- 새로운 내역 입력바 -->
       <section class="input-bar__container">
         <form action="" class="input-bar">
-
+          <!-- 날짜 입력 -->
           <article>
-            <section class="input-bar__input-wrapper input-bar__input-wrapper--date">
+            <section
+              class="input-bar__input-wrapper input-bar__input-wrapper--date"
+            >
               <label for="input-date">일자</label>
-              <input type="date" name="input-date" id="date" value="2023-03-09">
+              <input
+                type="date"
+                name="input-date"
+                id="date"
+                value="2023-03-09"
+              />
             </section>
           </article>
 
+          <!-- 금액 입력 -->
           <article>
-            <section class="input-bar__input-wrapper input-bar__input-wrapper--price">
+            <section
+              class="input-bar__input-wrapper input-bar__input-wrapper--price"
+            >
               <label for="input-price">금액</label>
               <div>
                 <button class="button--transparent">
-                  <img src="./images/minus.svg" alt="마이너스">
+                  <img src="./images/minus.svg" alt="마이너스" />
                 </button>
-                <input type="text" id="input-price" value="0"/>
+                <input type="text" id="input-price" value="0" />
                 <span>원</span>
               </div>
             </section>
           </article>
 
+          <!-- 내용 입력 -->
           <article>
-            <section class="input-bar__input-wrapper input-bar__input-wrapper--content">
+            <section
+              class="input-bar__input-wrapper input-bar__input-wrapper--content"
+            >
               <label for="input-content">내용</label>
-              <input type="text" id="input-content" placeholder="입력하세요"/>
+              <input type="text" id="input-content" placeholder="입력하세요" />
             </section>
           </article>
 
+          <!-- 결제수단 선택 -->
           <article>
-            <section class="input-bar__input-wrapper input-bar__input-wrapper--payment-type">
+            <section
+              class="input-bar__input-wrapper input-bar__input-wrapper--payment-type"
+            >
               <label for="input-payment-type">결제수단</label>
               <select name="paymentType" id="input-payment-type">
                 <option value="">선택하세요</option>
@@ -107,10 +131,40 @@
                 <option value="credit-card">신용카드</option>
               </select>
             </section>
+
+            <!-- 결제수단 드롭다운 패널 -->
+            <div class="input-bar__dropdown-panel">
+              <ul>
+                <li class="dropdown-panel__option">
+                  <div class="dropdown-panel__option--content">
+                    <p>현금</p>
+                    <button class="button--transparent button-transparent dropdown-panel__button--delete">
+                      <img src="./images/closed.svg" alt="현금 삭제" />
+                    </button>
+                  </div>
+                </li>
+                <li class="dropdown-panel__option">
+                  <div class="dropdown-panel__option--content">
+                    <p>신용카드</p>
+                    <button class="button--transparent dropdown-panel__button--delete">
+                      <img src="./images/closed.svg" alt="신용카드 삭제" />
+                    </button>
+                  </div>
+                </li>
+                <li class="dropdown-panel__option">
+                  <div class="dropdown-panel__option--content">
+                    <p>추가하기</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </article>
 
+          <!-- 분류 선택 -->
           <article>
-            <section class="input-bar__input-wrapper input-bar__input-wrapper--category">
+            <section
+              class="input-bar__input-wrapper input-bar__input-wrapper--category"
+            >
               <label for="input-category">분류</label>
               <select name="" id="input-category">
                 <option value="">선택하세요</option>
@@ -122,13 +176,52 @@
                 <option value="culture">문화/여가</option>
                 <option value="etc">미분류</option>
               </select>
+
+              <!-- 분류 드롭다운 패널 -->
+              <div class="input-bar__dropdown-panel">
+                <ul>
+                  <li class="dropdown-panel__option">
+                    <div class="dropdown-panel__option--content">
+                      <p>생활</p>
+                    </div>
+                  </li>
+                  <li class="dropdown-panel__option">
+                    <div class="dropdown-panel__option--content">
+                      <p>식비</p>
+                    </div>
+                  </li>
+                  <li class="dropdown-panel__option">
+                    <div class="dropdown-panel__option--content">
+                      <p>교통</p>
+                    </div>
+                  </li>
+                  <li class="dropdown-panel__option">
+                    <div class="dropdown-panel__option--content">
+                      <p>쇼핑/뷰티</p>
+                    </div>
+                  </li>
+                  <li class="dropdown-panel__option">
+                    <div class="dropdown-panel__option--content">
+                      <p>의료/건강</p>
+                    </div>
+                  </li>
+                  <li class="dropdown-panel__option">
+                    <div class="dropdown-panel__option--content">
+                      <p>문화/여가</p>
+                    </div>
+                  </li>
+                  <li class="dropdown-panel__option">
+                    <div class="dropdown-panel__option--content">
+                      <p>미분류</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </section>
             <button class="button--transparent input-bar__check-button">
-              <img src="./images/checkbox.svg" alt="내역 입력 확인">
+              <img src="./images/checkbox.svg" alt="내역 입력 확인" />
             </button>
           </article>
-          
-          
         </form>
       </section>
 
