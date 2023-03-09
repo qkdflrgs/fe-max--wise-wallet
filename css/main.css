@@ -1,5 +1,9 @@
 @import url(variables.css);
 
+body {
+  background-color: var(--color-off-white);
+}
+
 /* 메인 페이지 헤더 */
 .page-header {
   height: 194px;
@@ -16,6 +20,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 96px;
 }
 
 /* 메인페이지 헤더 월 carousel */
@@ -88,11 +93,11 @@ input[type="radio"]:checked + label > .tab-icon {
 }
 
 main {
-  width: 60%;
+  width: 848px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px auto;
+  margin: 0px auto 80px;
   position: relative;
 }
 
@@ -241,13 +246,17 @@ select {
   opacity: 0.4;
 }
 
-/* 수입지출 내역 요약(헤더) */
+/* 수입지출 내역 */
 .transaction__container {
   position: relative;
   top: 16px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
+/* 수입지출 내역 요약(헤더) */
 .transaction__header {
   display: flex;
   flex-direction: row;
@@ -256,53 +265,194 @@ select {
 }
 
 .transaction__header h2 {
-    font-family: var(--font-family-bold);
-    font-weight: var(--font-weight-body);
-    font-size: var(--font-size-body-large);
-    line-height: var(--line-height-body-large);
-    color: var(--color-primary);
+  font-family: var(--font-family-bold);
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+  color: var(--color-primary);
 }
 
 .transaction__total-amount-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
 .transaction__total-amount {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .transaction__total-amount-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .transaction__total-amount-item {
-    font-family: var(--font-family-bold);
-    font-weight: var(--font-weight-body);
-    font-size: var(--font-size-body-medium);
-    line-height: var(--line-height-body-regular);
-    color: var(--color-primary);
+  font-family: var(--font-family-bold);
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size-body-medium);
+  line-height: var(--line-height-body-regular);
+  color: var(--color-primary);
 }
 
 /* 수입지출 체크박스 */
 
-.transaction__total-amount-checkbox input[type=checkbox] {
-    display: none;
+.transaction__total-amount-checkbox input[type="checkbox"] {
+  display: none;
 }
 
-.transaction__total-amount-checkbox input[type=checkbox] + label {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url(../images/uncheckbox.svg) no-repeat center;
+.transaction__total-amount-checkbox input[type="checkbox"] + label {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/uncheckbox.svg) no-repeat center;
 }
 
-.transaction__total-amount-checkbox input[type=checkbox]:checked + label {
-    background: url(../images/checkbox.svg) no-repeat center;
+.transaction__total-amount-checkbox input[type="checkbox"]:checked + label {
+  background: url(../images/checkbox.svg) no-repeat center;
+}
+
+/* 수입지출 내역 */
+.transaction__body > ol {
+  gap: 32px;
+}
+
+.transaction__item {
+  gap: 21px;
+}
+
+.transaction__item-date-day,
+.transaction__item-amount,
+.transaction__item-amount--income,
+.transaction__item-amount--expense {
+  gap: 8px;
+}
+
+.transaction__item-info {
+  font-family: var(--font-family-bold);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-bold-medium);
+  line-height: var(--line-height-bold-medium);
+}
+
+.transaction__item-detail-list {
+  gap: 1px;
+  background-color: var(--color-primary-alt-40);
+  padding: 1px 0;
+}
+
+.transaction__item-detail-data {
+  gap: 16px;
+  padding: 16px;
+  border-top: 1px;
+  background-color: var(--color-off-white);
+}
+
+.transaction__item-detail-data--category {
+  width: 92px;
+  height: 32px;
+  padding: 4px 8px;
+  border-radius: 25px;
+  font-family: var(--font-family-bold);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-bold-medium);
+  line-height: var(--line-height-bold-medium);
+  color: var(--color-white);
+}
+
+.transaction__item-detail-data--content > p {
+  width: 320px;
+  height: 24px;
+  color: var(--color-primary);
+}
+
+.transaction__item-detail-data--payment-type > p {
+  width: 120px;
+  height: 24px;
+  color: var(--color-primary-alt);
+}
+
+.transaction__item-detail-data--price > p {
+  width: 234px;
+  height: 22px;
+  text-align: right;
+}
+
+.transaction__item-detail-data--content > p,
+.transaction__item-detail-data--payment-type > p,
+.transaction__item-detail-data--price > p {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size-body-medium);
+  line-height: var(--line-height-body-medium);
+}
+
+/* 자주 사용하는 flexbox */
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+/* font color */
+.font-primary {
+  color: var(--color-primary);
+}
+
+.font-primary-alt {
+  color: var(--color-primary-alt);
+}
+
+.font-secondary-red {
+  color: var(--color-secondary-red);
+}
+
+.font-secondary-cyan {
+  color: var(--color-secondary-cyan);
+}
+
+/* background-color */
+.bg-category-blue {
+  background-color: var(--color-category-blue);
+}
+
+.bg-category-green {
+  background-color: var(--color-category-green);
+}
+
+.bg-category-cyan {
+  background-color: var(--color-category-cyan);
+}
+
+.bg-category-pink {
+  background-color: var(--color-category-pink);
+}
+
+/* display none */
+.no-display {
+  display: none;
 }

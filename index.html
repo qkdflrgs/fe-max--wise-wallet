@@ -227,13 +227,18 @@
 
       <!-- 수입지출 내역 -->
       <section class="transaction__container">
-        <!-- 당월 내역 요약 -->
+        <!-- 요약 -->
         <header class="transaction__header">
           <h2>전체 내역 13건</h2>
           <section class="transaction__total-amount-wrapper">
             <div class="transaction__total-amount">
               <div class="transaction__total-amount-checkbox">
-                <input type="checkbox" name="income-check" id="income-check" checked />
+                <input
+                  type="checkbox"
+                  name="income-check"
+                  id="income-check"
+                  checked
+                />
                 <label for="income-check"></label>
               </div>
               <div class="transaction__total-amount-item">
@@ -243,8 +248,13 @@
             </div>
             <div class="transaction__total-amount">
               <div class="transaction__total-amount-checkbox">
-                <input type="checkbox" name="spending-check" id="spending-check" checked />
-                <label for="spending-check"></label>
+                <input
+                  type="checkbox"
+                  name="expense-check"
+                  id="expense-check"
+                  checked
+                />
+                <label for="expense-check"></label>
               </div>
               <div class="transaction__total-amount-item">
                 <p>지출</p>
@@ -254,115 +264,120 @@
           </section>
         </header>
 
-        <!-- 일별 내역 -->
-        <section>
-          <ul>
+        <!-- 내역 리스트 -->
+        <section class="transaction__body">
+          <ol class="flex-column">
+            <!-- 일별 수입지출 -->
             <li>
-              <article>
-                <header>
-                  <h4>월일</h4>
-                  <ul>
-                    <li>수입: 금액</li>
-                    <li>지출: 금액</li>
-                  </ul>
+              <article class="transaction__item flex-column">
+                <!-- 일별 수입지출 헤더 -->
+                <header class="transaction__item-info flex-row-between">
+                  <div class="transaction__item-date-day flex-row">
+                    <h3 class="font-primary">2월 10일</h3>
+                    <p class="font-primary-alt">금</p>
+                  </div>
+
+                  <section class="transaction__item-amount flex-row font-primary-alt">
+                    <div class="transaction__item-amount--income flex-row">
+                      <p>수입</p>
+                      <p>2,010,580원</p>
+                    </div>
+                    <div class="transaction__item-amount--expense flex-row">
+                      <p>지출</p>
+                      <p>56,240원</p>
+                    </div>
+                  </section>
                 </header>
-                <section>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <!-- 일별 수입지출 상세내역 -->
+                <section class="transaction__item-detail-list flex-column">
+                  <div class="transaction__item-detail-data flex-row">
+                    <div class="transaction__item-detail-data--category flex-row-center bg-category-blue">
+                      <p>식비</p>
+                    </div>
+                    <div class="transaction__item-detail-data--content flex-row font-primary">
+                      <p>잔치국수와 김밥</p>
+                    </div>
+                    <div class="transaction__item-detail-data--payment-type flex-row font-primary-alt">
+                      <p>현대카드</p>
+                    </div>
+                    <div class="transaction__item-detail-data--price flex-row font-secondary-red">
+                      <p>-9,500원</p>
+                    </div>
+                  </div>
+
+                  <div class="transaction__item-detail-data flex-row">
+                    <div class="transaction__item-detail-data--category flex-row-center bg-category-green">
+                      <p>입금</p>
+                    </div>
+                    <div class="transaction__item-detail-data--content flex-row font-primary">
+                      <p>2월 급여</p>
+                    </div>
+                    <div class="transaction__item-detail-data--payment-type flex-row font-primary-alt">
+                      <p>현금</p>
+                    </div>
+                    <div class="transaction__item-detail-data--price flex-row font-secondary-cyan">
+                      <p>2,010,580원</p>
+                    </div>
+                  </div>
                 </section>
               </article>
             </li>
+
             <li>
-              <article>
-                <header>
-                  <h4>월일</h4>
-                  <ul>
-                    <li>수입: 금액</li>
-                    <li>지출: 금액</li>
-                  </ul>
+              <article class="transaction__item flex-column">
+                <!-- 일별 수입지출 헤더 -->
+                <header class="transaction__item-info flex-row-between">
+                  <div class="transaction__item-date-day flex-row">
+                    <h3 class="font-primary">2월 7일</h3>
+                    <p class="font-primary-alt">화</p>
+                  </div>
+
+                  <section class="transaction__item-amount flex-row font-primary-alt">
+                    <div class="transaction__item-amount--income flex-row no-display">
+                      <p>수입</p>
+                      <p>2,010,580원</p>
+                    </div>
+                    <div class="transaction__item-amount--expense flex-row">
+                      <p>지출</p>
+                      <p>65,900원</p>
+                    </div>
+                  </section>
                 </header>
-                <section>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <!-- 일별 수입지출 상세내역 -->
+                <section class="transaction__item-detail-list flex-column">
+                  <div class="transaction__item-detail-data flex-row">
+                    <div class="transaction__item-detail-data--category flex-row-center bg-category-cyan">
+                      <p>쇼핑/뷰티</p>
+                    </div>
+                    <div class="transaction__item-detail-data--content flex-row font-primary">
+                      <p>여름 의류</p>
+                    </div>
+                    <div class="transaction__item-detail-data--payment-type flex-row font-primary-alt">
+                      <p>현대카드</p>
+                    </div>
+                    <div class="transaction__item-detail-data--price flex-row font-secondary-red">
+                      <p>-59,000원</p>
+                    </div>
+                  </div>
+
+                  <div class="transaction__item-detail-data flex-row">
+                    <div class="transaction__item-detail-data--category flex-row-center bg-category-pink">
+                      <p>문화/여가</p>
+                    </div>
+                    <div class="transaction__item-detail-data--content flex-row font-primary">
+                      <p>영화 스트리밍</p>
+                    </div>
+                    <div class="transaction__item-detail-data--payment-type flex-row font-primary-alt">
+                      <p>현대카드</p>
+                    </div>
+                    <div class="transaction__item-detail-data--price flex-row font-secondary-red">
+                      <p>-9,900원</p>
+                    </div>
+                  </div>
                 </section>
               </article>
             </li>
-            <li>
-              <article>
-                <header>
-                  <h4>월일</h4>
-                  <ul>
-                    <li>수입: 금액</li>
-                    <li>지출: 금액</li>
-                  </ul>
-                </header>
-                <section>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                      <tr>
-                        <td>분류</td>
-                        <td>내용</td>
-                        <td>결제수단</td>
-                        <td>금액</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </section>
-              </article>
-            </li>
-          </ul>
+          </ol>
         </section>
       </section>
     </main>
