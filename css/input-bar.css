@@ -46,7 +46,7 @@
 }
 
 .input-bar__input-wrapper label {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family-bold);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-bold-regular);
   line-height: var(--line-height-bold-regular);
@@ -54,9 +54,14 @@
 }
 
 .input-bar__input-wrapper input,
-select {
+.input-bar__input-wrapper select {
   border: none;
   height: 24px;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size-body-regular);
+  line-height: var(--line-height-body-regular);
+  color: var(--color-primary);
 }
 
 .input-bar__input-wrapper select {
