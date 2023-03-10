@@ -34,7 +34,7 @@
 .input-bar__input-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   padding: 0px;
   padding-right: 24px;
   gap: 4px;
@@ -62,10 +62,15 @@
   font-size: var(--font-size-body-regular);
   line-height: var(--line-height-body-regular);
   color: var(--color-primary);
+  background: var(--color-white);
 }
 
 .input-bar__input-wrapper select {
   width: 100px;
+}
+
+.input-bar__input-wrapper--date {
+    width: 88px;
 }
 
 .input-bar__input-wrapper--price > div {
@@ -78,7 +83,7 @@
   width: 78px;
 }
 
-.input-bar__input-wrapper--content input {
+.input-bar__input-wrapper--content {
   width: 164px;
 }
 
