@@ -84,6 +84,15 @@
 4. 목요일 : ~~내역 입력 기능 구현, 월 이동 설계~~입력바 레이아웃, 내역 레이아웃 10%
 5. 금요일 : ~~월 이동 구현~~ 내역 레이아웃 마무리
 
+### Week #2
+
+- DOM insertBefore
+- DOM template literal
+- Event target, preventDefault
+- Event 버블링, 캡처링, Delegation
+- 디버깅 방법
+- native 객체에서 prototype 활용 방식
+
 ## 이슈
 
 ### CSS 코드가 너무 길어져 가독성이 떨어지는 문제
