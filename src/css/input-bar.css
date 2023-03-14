@@ -70,7 +70,7 @@
 }
 
 .input-bar__input-wrapper--date {
-    width: 88px;
+  width: 88px;
 }
 
 .input-bar__input-wrapper--price > div {
@@ -78,30 +78,33 @@
   align-items: center;
 }
 
-.input-bar__input-wrapper--price input[type=checkbox] {
-    display: none;
+#sign-switcher {
+  display: none;
 }
 
-.input-bar__input-wrapper--price input[type=checkbox] + label {
-    display: block;
-    width: 24px;
-    height: 24px;
-    border-radius: 8px;
-    background: url(../images/plus.svg) no-repeat center;
-    transition: all ease 0.1s;
+#sign-switcher + label {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: url(../images/plus.svg) no-repeat center;
+  transition: all ease 0.1s;
 }
 
-.input-bar__input-wrapper--price input[type=checkbox]:checked + label {
-    background: url(../images/minus.svg) no-repeat center;    
+#sign-switcher:checked + label {
+  background: url(../images/minus.svg) no-repeat center;
 }
 
-.input-bar__input-wrapper--price input[type=checkbox] + label:active,
-.input-bar__input-wrapper--price input[type=checkbox]:checked + label:active {
-    background-color: var(--color-primary-alt-40);
-    opacity: 0.5;
+#sign-switcher + label:hover {
+  background-color: var(--color-primary-alt-40);
 }
 
-.input-bar__input-wrapper--price input[type=text] {
+#sign-switcher + label:active,
+#sign-switcher:checked + label:active {
+  background-color: var(--color-primary-alt);
+}
+
+.input-bar__input-wrapper--price input[type="text"] {
   text-align: right;
   width: 78px;
 }
