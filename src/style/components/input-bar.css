@@ -11,6 +11,21 @@
     background-color: var(--color-white);
 }
 
+.amount-switch-btn+label {
+    width: 24px;
+    height: 24px;
+    background: url('../../assets/icon/minus_icon.svg') no-repeat 0 0px / contain;
+    cursor: pointer;
+}
+
+.amount-switch-btn:checked+label {
+    background: url('../../assets/icon/plus_icon.svg') no-repeat 0 0px / contain;
+}
+
+.amount-switch-btn {
+    display: none;
+}
+
 .bar-seperator {
     width: 1px;
     height: 44px;
@@ -26,7 +41,7 @@
 }
 
 .bar-date label,
-.bar-amount label,
+.bar-amount label:first-child,
 .bar-description label,
 .bar-payments label,
 .bar-category label {
@@ -36,6 +51,7 @@
 
 .amount-section, .payments-section, .bar-category {
     display: flex;
+    align-items: center;
 }
 
 .input-box {
@@ -64,13 +80,7 @@
     width: 134px;
 }
 
-.amount-btn {
-    margin: 0px;
-    width: 24px;
-    height: 24px;
-}
-
-.amount-section input:nth-child(2) {
+.amount-section input:nth-child(3) {
     margin: 0px 8px;
     width: 78px;
     text-align: right;
@@ -97,6 +107,10 @@
     width: 100px;
 }
 
+.category-section {
+    margin-right: 24px;
+}
+
 .bar-category {
     display: flex;
 }
@@ -117,17 +131,4 @@
     width: 16px;
     height: 16px;
     rotate: 90deg;
-}
-
-.input-bar-btn {
-    margin-left: 24px;
-    height: 40px;
-    width: 40px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-primary-alt);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
 }
