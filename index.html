@@ -14,31 +14,32 @@
             <div class="header-selector">
                 <button class="select-btn" type="button"><img src="src/assets/icon/arrowleft_icon.svg" alt=""></button>
                 <div class="selector">
-                    <span class="bold_small">2023</span>
-                    <span class="display_large">2</span>
-                    <span class="bold_small">Febuary</span>
+                    <span class="selector-year bold_small"></span>
+                    <span class="selector-num display_large"></span>
+                    <span class="selector-eng bold_small"></span>
                 </div>
                 <button class="select-btn" type="button"><img src="src/assets/icon/arrowright_icon.svg" alt=""></button>
             </div>
-            <div class="header-taps">
-                <button class="list-btn"><img src="src/assets/icon/list_icon.svg" alt=""></button>
+            <nav class="header-taps">
+                <button class="list-btn tap-active"><img src="src/assets/icon/list_icon.svg" alt=""></button>
                 <button class="calendar-btn"><img src="src/assets/icon/calendar_icon.svg" alt=""></button>
                 <button class="chart-btn"><img src="src/assets/icon/chart_icon.svg" alt=""></button>
-            </div>
+            </nav>
         </div>
     </header>
-    <main>
-        <article class="tap-page">
+    <main class="main">
+        <section class="list-tap">
             <form class="input-bar">
                 <div class="bar-date">
                     <label for="date-input" class="bold_small">일자</label>
-                    <input id="date-input" class="input-box" type="number" maxlength="8" value="" oninput="maxLengthCheck(this)">
+                    <input id="date-input" class="input-box" type="number" maxlength="8" value="">
                 </div>
                 <div class="bar-seperator"></div>
                 <div class="bar-amount">
                     <label for="amount-input" class="bold_small">금액</label>
                     <div class="amount-section">
-                        <input class="amount-btn" type="checkbox">
+                        <input id="amount-btn" class="amount-switch-btn" type="checkbox">
+                        <label for="amount-btn"></label>
                         <input id="amount-input" class="input-box" placeholder="0" type="text">
                         <span class="body_regular">원</span>
                     </div>
@@ -65,18 +66,66 @@
                                 <img class="dropbox-btn" src="src/assets/icon/dropbox_icon.svg" alt="">
                             </div>
                     </div>
-                    <button class="input-bar-btn" type="button">
+                    <button class="btn" type="button">
                         <img src="src/assets/icon/check_icon.svg" alt="">
                     </button>
                 </div>
             </form>
-        </article>
-        <article class="calendar-page display-none">
-
-        </article>
-        <article class="chart-page display-none">
-
-        </article>
+            <div class="list-contents">
+                <div class="info-title">
+                    <span class="body_large">전체 내역 13건</span>
+                    <div class="info-contents">
+                        <div class="info-income">
+                            <input id="checkbox-income" class="checkbox" type="checkbox" name="" id="">
+                            <label for="checkbox-income"></label>
+                            <span class="body_medium">수입 2,010,580원</span>
+                        </div>
+                        <div class="info-expense">
+                            <input id="checkbox-expense" class="checkbox" type="checkbox" name="" id="">
+                            <label for="checkbox-expense"></label>
+                            <span class="body_medium">지출 798,180원</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="date-list">
+                    <div class="list-title">
+                        <div class="date-title">
+                            <span class="bold_medium">2월 15일</span>
+                            <span class="bold_medium">수</span>
+                        </div>
+                        <div class="contents-title">
+                            <span class="bold_medium">수입</span>
+                            <span class="bold_medium">56,240원</span>
+                            <span class="bold_medium">지출</span>
+                            <span class="bold_medium">56,240원</span>
+                        </div>
+                    </div>
+                    <li class="list-item">
+                        <div class="item-contents">
+                            <div class="tag culture">문화/여가</div>
+                            <span class="list-name">스트리밍 서비스 정기 결제</span>
+                            <span class="list-payment">현대카드</span>
+                            <span class="list-amount">-10,900원</span>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="item-contents">
+                            <div class="tag transport">교통</div>
+                            <span class="list-name">후불 교통비 결제</span>
+                            <span class="list-payment">현대카드</span>
+                            <span class="list-amount">-45,340원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="calendar-tap hidden">
+        </section>
+        <section class="chart-tap hidden">
+        </section>
     </main>
+    <script src="src/script/inputbar.js"></script>
+    <script src="src/script/checkMaxLengthOfNumber.js"></script>
+    <script src="src/script/selectTap.js"></script>
 </body>
 </html>
