@@ -79,5 +79,5 @@
 }
 
 .tap-active img {
-    stroke: var(--color-primary-alt);
+    filter: brightness(0) invert(1);
 }
