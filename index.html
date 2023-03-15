@@ -128,38 +128,40 @@
               class="input-bar__item input-bar__item--payment-type"
             >
               <label for="input-payment-type">결제수단</label>
-              <select name="paymentType" id="input-payment-type">
+              <!-- <select name="paymentType" id="input-payment-type">
                 <option value="">선택하세요</option>
                 <option value="cash">현금</option>
                 <option value="credit-card">신용카드</option>
-              </select>
+              </select> -->
+              <div class="select-box flex-row">
+                <p>결제수단</p>
+                <button class="button--transparent"></button>
+              </div>
             </section>
 
             <!-- 결제수단 드롭다운 패널 -->
-            <div class="input-bar__dropdown-panel">
+            <div class="dropdown">
               <ul>
-                <li class="dropdown-panel__option">
-                  <div class="dropdown-panel__option--content">
+                <li class="dropdown-item">
+                  <div class="dropdown-item__content">
                     <p>현금</p>
                     <button
-                      class="button--transparent button-transparent dropdown-panel__button--delete"
+                      class="button--transparent delete-button filter-secondary-red"
                     >
-                      <img src="./src/images/closed.svg" alt="현금 삭제" />
                     </button>
                   </div>
                 </li>
-                <li class="dropdown-panel__option">
-                  <div class="dropdown-panel__option--content">
+                <li class="dropdown-item">
+                  <div class="dropdown-item__content">
                     <p>신용카드</p>
                     <button
-                      class="button--transparent dropdown-panel__button--delete"
+                      class="button--transparent delete-button filter-secondary-red"
                     >
-                      <img src="./src/images/closed.svg" alt="신용카드 삭제" />
                     </button>
                   </div>
                 </li>
-                <li class="dropdown-panel__option">
-                  <div class="dropdown-panel__option--content">
+                <li class="dropdown-item">
+                  <div class="dropdown-item__content">
                     <p>추가하기</p>
                   </div>
                 </li>
@@ -185,40 +187,40 @@
               </select>
 
               <!-- 분류 드롭다운 패널 -->
-              <!-- <div class="input-bar__dropdown-panel">
+              <!-- <div class="dropdown">
                 <ul>
-                  <li class="dropdown-panel__option">
-                    <div class="dropdown-panel__option--content">
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
                       <p>생활</p>
                     </div>
                   </li>
-                  <li class="dropdown-panel__option">
-                    <div class="dropdown-panel__option--content">
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
                       <p>식비</p>
                     </div>
                   </li>
-                  <li class="dropdown-panel__option">
-                    <div class="dropdown-panel__option--content">
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
                       <p>교통</p>
                     </div>
                   </li>
-                  <li class="dropdown-panel__option">
-                    <div class="dropdown-panel__option--content">
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
                       <p>쇼핑/뷰티</p>
                     </div>
                   </li>
-                  <li class="dropdown-panel__option">
-                    <div class="dropdown-panel__option--content">
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
                       <p>의료/건강</p>
                     </div>
                   </li>
-                  <li class="dropdown-panel__option">
-                    <div class="dropdown-panel__option--content">
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
                       <p>문화/여가</p>
                     </div>
                   </li>
-                  <li class="dropdown-panel__option">
-                    <div class="dropdown-panel__option--content">
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
                       <p>미분류</p>
                     </div>
                   </li>

@@ -59,6 +59,22 @@
   background-color: var(--color-category-pink);
 }
 
+/* svg filter */
+.filter-white {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(54%)
+    hue-rotate(210deg) brightness(122%) contrast(98%);
+}
+
+.filter-primary-alt {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(14%) saturate(739%)
+    hue-rotate(210deg) brightness(88%) contrast(78%);
+}
+
+.filter-secondary-red {
+  filter: brightness(0) saturate(100%) invert(46%) sepia(14%) saturate(4403%)
+    hue-rotate(332deg) brightness(95%) contrast(90%);
+}
+
 /* display none */
 .no-display {
   display: none;
