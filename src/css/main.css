@@ -1,0 +1,113 @@
+body {
+  background-color: var(--color-off-white);
+}
+
+/* 메인 페이지 헤더 */
+#header {
+  height: 194px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+#header > section {
+  width: 846px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 96px;
+}
+
+/* 메인페이지 헤더 월 carousel */
+.month-carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 232px;
+}
+
+.month-carousel > button {
+  text-align: center;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(54%)
+    hue-rotate(210deg) brightness(122%) contrast(98%);
+  transition: all ease 0.1s;
+}
+
+.month-carousel > button:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.prev-month-btn {
+  background: url(../images/chevron-left.svg) no-repeat center;
+}
+
+.next-month-btn {
+  background: url(../images/chevron-right.svg) no-repeat center;
+}
+
+.month-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month-view > p {
+  font-family: var(--font-family-bold);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-bold-regular);
+}
+
+.month-view > p:nth-child(2) {
+  font-family: var(--font-family-display);
+  font-style: normal;
+  font-weight: var(--font-weight-display-large);
+  font-size: var(--font-size-display-large);
+}
+
+/* 헤더 네비게이션 탭 */
+.page-tabs ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-tabs li {
+  margin: 10px;
+}
+
+.page-tabs input {
+  display: none;
+}
+
+.tab-icon {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(14%) saturate(739%)
+    hue-rotate(210deg) brightness(88%) contrast(78%);
+}
+
+.tab-icon:hover {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(54%)
+    hue-rotate(210deg) brightness(122%) contrast(98%);
+    cursor: pointer;
+}
+
+input:checked + label > .tab-icon {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(54%)
+    hue-rotate(210deg) brightness(122%) contrast(98%);
+}
+
+main {
+  width: 848px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto 80px;
+  position: relative;
+}
