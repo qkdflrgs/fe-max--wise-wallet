@@ -1,43 +1,29 @@
-const selectorYear = document.querySelector('#selector_year');
-const selectorNum = document.querySelector('#selector__num');
-const selectorEng = document.querySelector('#selector__eng');
-const inputDate = document.querySelector('#date-input');
-const inputAmount = document.querySelector("#input_amount");
-const amountBtn = document.querySelector('#selector-amount');
-
-function setDefault() {
+function setDefaultInputDate() {
+    const dateInput = document.querySelector('#date-input');
     const monthEng = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const date = new Date();
     const year = date.getUTCFullYear();
     const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
     const monthIndex = date.getUTCMonth();
     const day = date.getUTCDate().toString().padStart(2, '0');
-    
-    inputDate.value = `${year}${month}${day}`;
-    document.querySelector('#selector-year').innerText = year;
-    document.querySelector('#selector-num').innerText = date.getUTCMonth() + 1;
-    document.querySelector('#selector-eng').innerText = monthEng[monthIndex];
-    console.log(monthNum);
+
+    dateInput.value = `${year}${month}${day}`;
+
+    document.querySelector('.selector-year').innerText = year;
+    document.querySelector('.selector-num').innerText = date.getUTCMonth() + 1;
+    document.querySelector('.selector-eng').innerText = monthEng[monthIndex];
 }
 
-setDefault();
+const amountInput = document.querySelector('#amount-input');
+amountInput.addEventListener('keyup', function(e) {
+  let value = e.target.value;
+  value = Number(value.replaceAll(',', ''));
+  if(isNaN(value)) {         //NaN인지 판별
+    amountInput.value = 0;   
+  }else {                   //NaN이 아닌 경우
+    const formatValue = value.toLocaleString('ko-KR');
+    amountInput.value = formatValue;
+  }
+})
 
-
-// inputAmount.addEventListener('input', function(e){
-// 	e.value = e.value.replace(/[^0-9]/g,'').replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-// })
-
-function maxLengthCheck(object) {
-    if(object.value.length > object.maxLength) object.value = object.value.slice(0, object.maxLength);
-}
-
-function clickAmountBtn() {
-    if(amountBtn.src == 'src/minus_icon.svg') {
-        amountBtn.src = 'src/plus_icon.svg';
-    } else if(amountBtn.src == '.src/plus_icon.svg') {
-        amountBtn.src = 'src/minus_icon.svg';
-    }
-}
-
-amountBtn.addEventListener("click", clickAmountBtn);
-
+setDefaultInputDate();
