@@ -150,10 +150,6 @@
   z-index: 1;
 }
 
-.closed {
-  display: none;
-}
-
 .input-bar__item #input-category + .dropdown {
   width: 148px;
 }
@@ -166,6 +162,14 @@
 .dropdown-item:hover {
   background-color: var(--color-off-white);
   cursor:pointer;
+}
+
+.dropdown-item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 8px 8px;
 }
 
 .dropdown-item__content {

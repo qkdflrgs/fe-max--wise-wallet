@@ -3,16 +3,8 @@ const dropdown = document.querySelector(
   ".input-bar__item--payment-type + .dropdown"
 );
 
-const isClosedInClassNameList = () => {
-  return dropdown.classList.contains("closed");
-};
-
 const handleSelectBoxClick = () => {
-  if (isClosedInClassNameList()) {
-    dropdown.classList.remove("closed");
-    return;
-  }
-  dropdown.classList.add("closed");
+  dropdown.hidden = !dropdown.hidden;
 };
 
 const addPaymentSelectBoxClickListener = () => {
