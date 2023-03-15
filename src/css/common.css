@@ -65,6 +65,10 @@
     hue-rotate(210deg) brightness(122%) contrast(98%);
 }
 
+.filter-primary {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(6%) saturate(4586%) hue-rotate(205deg) brightness(94%) contrast(88%);
+}
+
 .filter-primary-alt {
   filter: brightness(0) saturate(100%) invert(75%) sepia(14%) saturate(739%)
     hue-rotate(210deg) brightness(88%) contrast(78%);

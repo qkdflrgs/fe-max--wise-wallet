@@ -4,6 +4,9 @@ const selectBoxContent = document.querySelector(
 const dropdown = document.querySelector(
   ".input-bar__item--payment-type + .dropdown"
 );
+const arrowDown = document.querySelector(
+  ".input-bar__item--payment-type .select-box button"
+);
 
 const findContentElementFromItem = (item) => {
   if (item.className === "dropdown-item") {
@@ -19,14 +22,25 @@ const isAdditionItem = (item) => {
   return item.closest(".item-addition") !== null;
 };
 
+const changeSelectBoxColor = () => {
+    if (selectBoxContent.classList.contains('font-primary')) return;
+    selectBoxContent.classList.add('font-primary');
+}
+
+const closeDropdown = () => {
+  dropdown.hidden = true;
+  arrowDown.classList.toggle("font-primary");
+};
+
 const handleItemClick = (e) => {
   if (isAdditionItem(e.target)) {
-    dropdown.hidden = true;
+    closeDropdown();
     return;
   }
   const contentElement = findContentElementFromItem(e.target);
   selectBoxContent.textContent = contentElement.textContent;
-  dropdown.hidden = true;
+  changeSelectBoxColor();
+  closeDropdown();
 };
 
 const addPaymentDropdownSelectListener = () => {
