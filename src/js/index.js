@@ -1,6 +1,12 @@
-import { initDefaultDate } from "./components/dateInput.js";
-import { addButtonEventListener, initMonthView } from "./components/monthCarousel.js";
-import { addPriceInputEventListener, initDefaultPrice } from "./components/priceInput.js";
+import {
+  addButtonEventListener,
+  initMonthView,
+} from "./components/header/monthCarousel.js";
+import { initDefaultDate } from "./components/inputBar/dateInput.js";
+import {
+  addPriceInputEventListener,
+  initDefaultPrice,
+} from "./components/inputBar/priceInput.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // 헤더 연월 carousel
