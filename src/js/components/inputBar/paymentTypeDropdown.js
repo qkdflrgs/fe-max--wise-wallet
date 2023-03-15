@@ -1,6 +1,9 @@
 const selectBoxContent = document.querySelector(
   ".input-bar__item--payment-type .select-box p"
 );
+const selectBox = document.querySelector(
+  ".input-bar__item--payment-type .select-box"
+);
 const dropdown = document.querySelector(
   ".input-bar__item--payment-type + .dropdown"
 );
@@ -18,21 +21,21 @@ const findContentElementFromItem = (item) => {
   return item;
 };
 
-const isAdditionItem = (item) => {
-  return item.closest(".item-addition") !== null;
-};
+const isAdditionItem = (item) => item.closest(".item-addition") !== null;
 
 const changeSelectBoxColor = () => {
-    if (selectBoxContent.classList.contains('font-primary')) return;
-    selectBoxContent.classList.add('font-primary');
-}
+  if (selectBoxContent.classList.contains("font-primary")) return;
+  selectBoxContent.classList.add("font-primary");
+};
 
 const closeDropdown = () => {
   dropdown.hidden = true;
-  arrowDown.classList.toggle("font-primary");
+  arrowDown.classList.remove("font-primary");
 };
 
 const handleItemClick = (e) => {
+  e.stopPropagation();
+
   if (isAdditionItem(e.target)) {
     closeDropdown();
     return;
@@ -47,4 +50,33 @@ const addPaymentDropdownSelectListener = () => {
   dropdown.addEventListener("click", handleItemClick);
 };
 
-export { addPaymentDropdownSelectListener };
+const preventButtonDefaultEvnet = (e) => {
+  if (e.target === arrowDown) {
+    e.preventDefault();
+  }
+};
+
+const handleSelectBoxClick = (e) => {
+  e.stopPropagation();
+  preventButtonDefaultEvnet(e);
+  dropdown.hidden = !dropdown.hidden;
+  arrowDown.classList.toggle("filter-primary");
+};
+
+const addPaymentSelectBoxClickListener = () => {
+  selectBox.addEventListener("click", handleSelectBoxClick);
+};
+
+const handleOutsideDrowndownClick = () => {
+  closeDropdown();
+};
+
+const addPaymentDropdownOutsideClickListener = () => {
+  document.addEventListener("click", handleOutsideDrowndownClick);
+};
+
+export {
+  addPaymentDropdownSelectListener,
+  addPaymentSelectBoxClickListener,
+  addPaymentDropdownOutsideClickListener,
+};

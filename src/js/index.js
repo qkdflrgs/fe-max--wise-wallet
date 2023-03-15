@@ -1,6 +1,9 @@
 import { initDefaultDate } from "./components/inputBar/dateInput.js";
-import { addPaymentDropdownSelectListener } from "./components/inputBar/paymentTypeDropdown.js";
-import { addPaymentSelectBoxClickListener } from "./components/inputBar/paymentTypeSelect.js";
+import {
+  addPaymentDropdownOutsideClickListener,
+  addPaymentDropdownSelectListener,
+  addPaymentSelectBoxClickListener,
+} from "./components/inputBar/paymentTypeDropdown.js";
 import {
   addButtonEventListener,
   initMonthView,
@@ -23,4 +26,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // 결제수단 선택란
   addPaymentSelectBoxClickListener();
   addPaymentDropdownSelectListener();
+  addPaymentDropdownOutsideClickListener();
 });
