@@ -3,7 +3,7 @@ const handleDropdown = () => {
   const items = document.querySelectorAll(".dropdown-item");
 
   selectBoxes.forEach((s) => {
-    s.addEventListener("click", showDropdown);
+    s.addEventListener("click", toggleDropdown);
   });
   items.forEach((i) => {
     i.addEventListener("click", selectItem);
@@ -12,7 +12,7 @@ const handleDropdown = () => {
   document.addEventListener("click", hideActiveDropdown);
 };
 
-const showDropdown = (e) => {
+const toggleDropdown = (e) => {
   e.stopPropagation();
 
   if (!isActiveDropdown(e)) {

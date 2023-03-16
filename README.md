@@ -75,10 +75,10 @@
     - [ ] 모달창 밖을 클릭하면 모달창 끄기
 - 분류
     - [x] 모든 드롭다운에 동일하게 적용시키기
-    - [ ] 수입, 지출에 따라 다른 목록 보여주기
+    - [x] 수입, 지출에 따라 다른 목록 보여주기(~3/16 목요일)
 - 생성
   - [ ] 입력값을 검증
-  - [ ] 검증을 통과하면 활성화함(~0315 수요일)
+  - [ ] 검증을 통과하면 활성화함(~~~0315 수요일~~)
 
 ## 학습 계획
 
@@ -122,3 +122,43 @@ Event target vs currentTarget
 - parseInt(), Number() 가 NaN을 반환하는 문제
 - 분류(카테고리) 드롭다운 너비가 select 박스가 아닌 분류 입력란 전체에 맞춰지는 문제
 - 결제수단 드롭다운에만 적용되는 js 코드를 작성해버림
+  - Event delegation, currentTarget 적용해서 모든 드롭다운에 적용되는 코드로 다시 작성함
+  - 함수 이름 단순하게 지으니 훨씬 가독성이 올라감
+  - export 필요없이 해당 파일에서 실행하고 모듈 js파일에서 import 만 해주면 동작함
+
+## 구현 과정
+
+<details>
+<summary>수입/지출에 따라 카테고리 드롭다운 리스트 변경</summary>
+
+금액 부호에 따라 카테고리 드롭다운 변경하기
+
+금액 부호 checked => 지출/수입 판별
+지출, 수입에 맞는 카테고리 불러와서 element 만들기
+ul 비우기
+elements 넣기
+
+### child node 버리기 => how?
+1) parentNode.removeChild(childNode)
+2) parentNode.replaceChildren(...newChildren) => 2022
+3) innerHTML = ''
+4) textContent = ''
+5) child.remove() => 일부에서 지원x
+6) lastchild() + while loop
+
+3 < 4, firstchild < lastchild : 컬렉션 구현방식 때문
+호환성 replaceChildren < remove() < removechild()
+
+### appendChild vs append
+
+append는 여러 요소를 받을 수 있고, node와 element 둘 다 인자로 받을 수 있다.(raw text 같은 것)
+
+text를 감싸고 있는 요소들도 만들어줘야 하기 때문에 append의 이점이 없고, 추후 교체 가능성도 생각해서 appendChild 로 카테고리 아이템을 만들어줬다.
+
+### replaceChild로 ul 통째로 교체
+
+dropdown 자식으로 ul로 아이템들이 감싸져있어서 이걸 통째로 교체해줌.
+li 하나하나 remove & append 하는것보다 효율이 좋아보였음.
+
+
+</details>

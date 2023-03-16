@@ -8,7 +8,8 @@ import {
   initDefaultPrice,
 } from "./components/inputBar/priceInput.js";
 import './components/inputBar/dropdown.js';
-import './components/button.js';
+import './components/common/button.js';
+import './components/inputBar/categorySwitcher.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   // 헤더 연월 carousel
