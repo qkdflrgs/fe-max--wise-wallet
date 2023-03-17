@@ -74,10 +74,12 @@
       - [ ] 해당 항목 삭제하기
     - [ ] 모달창 밖을 클릭하면 모달창 끄기
 - 분류
-    - [ ] 수입, 지출에 따라 다른 목록 보여주기
+    - [x] 모든 드롭다운에 동일하게 적용시키기
+    - [x] 수입, 지출에 따라 다른 목록 보여주기(~3/16 목요일)
+    - [x] 목록 교체하면 셀렉트 박스 초기화하기
 - 생성
   - [ ] 입력값을 검증
-  - [ ] 검증을 통과하면 활성화함(~0315 수요일)
+  - [ ] 검증을 통과하면 활성화함(~~~0315 수요일~~)
 
 ## 학습 계획
 
@@ -98,12 +100,86 @@
 - 디버깅 방법
 - native 객체에서 prototype 활용 방식
 
-## 이슈
+## 학습 정리
 
-### CSS 코드가 너무 길어져 가독성이 떨어지는 문제
+### 2주차
 
-### HTML element의 클래스가 너무 많아져 HTML 가독성을 해치는 문제
+Event target vs currentTarget
+- target은 이벤트가 발생한 바로 그 객체
+- currentTarget은 현재 이벤트 핸들러가 등록된 개체(요소)
 
-### parseInt(), Number() 가 NaN을 반환하는 문제
+## 삽질한 것들
 
-### 이벤트 위임으로 클릭이벤트를 핸들링할 때, 데이터가 포함된 element 찾기
+### 1주차
+
+-  CSS 코드가 너무 길어져 가독성이 떨어짐
+   -  메인 페이지를 구성하는 큰 요소들로 css 파일을 분리해서 어느 정도 해소할 수 있었다.
+-  HTML element의 클래스가 너무 많아져 HTML 가독성을 해침
+   -  BEM 방식의 클래스명과 더불어 HTML 코드에 클래스가 지나치게 많다. js로 동적 기능을 붙이면서 불필요한 클래스는 지우고 단순화하고 있다.
+   -  HTML -> CSS -> JS 방식이 아니라 요소, 기능별로 HTML, CSS, JS를 왔다갔다 거리며 작업을 진행하면 불필요하게 클래스를 붙이는 걸 줄일 수 있을 것 같다.(by kakamotobi)
+
+### 2주차
+
+- parseInt(), Number() 가 NaN을 반환하는 문제
+- 분류(카테고리) 드롭다운 너비가 select 박스가 아닌 분류 입력란 전체에 맞춰지는 문제
+- 결제수단 드롭다운에만 적용되는 js 코드를 작성해버림
+  - Event delegation, currentTarget 적용해서 모든 드롭다운에 적용되는 코드로 다시 작성함
+  - 함수 이름 단순하게 지으니 훨씬 가독성이 올라감
+  - export 필요없이 해당 파일에서 실행하고 모듈 js파일에서 import 만 해주면 동작함
+
+## 구현 과정
+
+<details>
+<summary>수입/지출에 따라 카테고리 드롭다운 리스트 변경</summary>
+
+금액 부호에 따라 카테고리 드롭다운 변경하기
+
+금액 부호 checked => 지출/수입 판별
+지출, 수입에 맞는 카테고리 불러와서 element 만들기
+ul 비우기
+elements 넣기
+
+### child node 버리기 => how?
+1) parentNode.removeChild(childNode)
+2) parentNode.replaceChildren(...newChildren) => 2022
+3) innerHTML = ''
+4) textContent = ''
+5) child.remove() => 일부에서 지원x
+6) lastchild() + while loop
+
+3 < 4, firstchild < lastchild : 컬렉션 구현방식 때문
+호환성 replaceChildren < remove() < removechild()
+
+### appendChild vs append
+
+append는 여러 요소를 받을 수 있고, node와 element 둘 다 인자로 받을 수 있다.(raw text 같은 것)
+
+text를 감싸고 있는 요소들도 만들어줘야 하기 때문에 append의 이점이 없고, 추후 교체 가능성도 생각해서 appendChild 로 카테고리 아이템을 만들어줬다.
+
+### replaceChild로 ul 통째로 교체
+
+dropdown 자식으로 ul로 아이템들이 감싸져있어서 이걸 통째로 교체해줌.
+li 하나하나 remove & append 하는것보다 효율이 좋아보였음.
+
+
+</details>
+
+<details>
+<summary>카테고리 메뉴 변경될 때, 셀렉트 박스 초기화하기</summary>
+
+이미 dropdown node를 잡아놨는데, 그 앞의 node(셀렉트 박스)를 가져올 순 없을까?
+-> previousElementNode
+-> nextElementNode도 있음
+
+초기화 과정
+- 셀렉트 박스 p.textContent = '선택하세요'
+
+
+문제
+- 드롭다운 메뉴(item)에 이벤트가 걸려있음 -> 드롭다운에 걸어서 이벤트 위임하기
+- 드롭다운+content 인자로 받아서 셀렉트 박스 내용 변경하는 함수로 수정
+- 금액 부호 변경할 때, 분류 셀렉트 박스 active로 바뀜
+  - updateSelectBox에 active 추가하는 코드가 들어있음
+  - activate/deactivate 함수로 나누고 deactivate invoke
+
+</details>

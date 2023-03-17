@@ -27,8 +27,8 @@
   position: relative;
 }
 
-.input-bar > article:last-of-type {
-  padding: 16px 24px;
+.input-bar > button {
+  margin: 16px 24px 16px 0;
 }
 
 .input-bar__item {
@@ -54,7 +54,6 @@
 }
 
 .input-bar__item input,
-.input-bar__item select,
 .input-bar__item .select-box {
   border: none;
   height: 24px;
@@ -67,7 +66,7 @@
 }
 
 .input-bar__item input::placeholder,
-.input-bar__item .select-box {
+.input-bar__item .select-box:not(.selected){
   color: var(--color-primary-alt);
 }
 
@@ -151,9 +150,9 @@
   z-index: 1;
 }
 
-.input-bar__item #input-category + .dropdown {
+/* .input-bar__item #input-category + .dropdown {
   width: 148px;
-}
+} */
 
 .dropdown-item {
   padding: 16px 24px 0px;

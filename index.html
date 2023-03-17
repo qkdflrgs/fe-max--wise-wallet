@@ -134,39 +134,39 @@
                 <option value="credit-card">신용카드</option>
               </select> -->
               <div class="select-box flex-row">
-                <p>결제수단</p>
+                <p>선택하세요</p>
                 <button class="button--transparent"></button>
+              </div>
+              <!-- 결제수단 드롭다운 패널 -->
+              <div class="dropdown" hidden>
+                <ul>
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
+                      <p>현금</p>
+                      <button
+                        class="button--transparent delete-button filter-secondary-red"
+                      >
+                      </button>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="dropdown-item__content">
+                      <p>신용카드</p>
+                      <button
+                        class="button--transparent delete-button filter-secondary-red"
+                      >
+                      </button>
+                    </div>
+                  </li>
+                  <li class="dropdown-item item-addition">
+                    <div class="dropdown-item__content">
+                      <p>추가하기</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </section>
 
-            <!-- 결제수단 드롭다운 패널 -->
-            <div class="dropdown" hidden>
-              <ul>
-                <li class="dropdown-item">
-                  <div class="dropdown-item__content">
-                    <p>현금</p>
-                    <button
-                      class="button--transparent delete-button filter-secondary-red"
-                    >
-                    </button>
-                  </div>
-                </li>
-                <li class="dropdown-item">
-                  <div class="dropdown-item__content">
-                    <p>신용카드</p>
-                    <button
-                      class="button--transparent delete-button filter-secondary-red"
-                    >
-                    </button>
-                  </div>
-                </li>
-                <li class="dropdown-item item-addition">
-                  <div class="dropdown-item__content">
-                    <p>추가하기</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </article>
 
           <!-- 분류 선택 -->
@@ -175,7 +175,7 @@
               class="input-bar__item input-bar__item--category"
             >
               <label for="input-category">분류</label>
-              <select name="" id="input-category">
+              <!-- <select name="" id="input-category">
                 <option value="">선택하세요</option>
                 <option value="life">생활</option>
                 <option value="food">식비</option>
@@ -184,10 +184,15 @@
                 <option value="medical">의료/건강</option>
                 <option value="culture">문화/여가</option>
                 <option value="etc">미분류</option>
-              </select>
+              </select> -->
+
+              <div class="select-box flex-row">
+                <p>선택하세요</p>
+                <button class="button--transparent"></button>
+              </div>
 
               <!-- 분류 드롭다운 패널 -->
-              <!-- <div class="dropdown">
+              <div class="dropdown" hidden>
                 <ul>
                   <li class="dropdown-item">
                     <div class="dropdown-item__content">
@@ -225,12 +230,13 @@
                     </div>
                   </li>
                 </ul>
-              </div> -->
+              </div>
             </section>
-            <button class="button--transparent input-bar__check-button">
-              <img src="./src/images/checkbox.svg" alt="내역 입력 확인" />
-            </button>
           </article>
+
+          <button class="button--transparent input-bar__check-button">
+            <img src="./src/images/checkbox.svg" alt="내역 입력 확인" />
+          </button>
         </form>
       </section>
 
