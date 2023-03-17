@@ -1,4 +1,7 @@
 import { getCategories } from "../../contants/categories.js";
+import { deactivateSelectBox, updateSelectBox } from "./dropdown.js";
+
+const INITIAL_SELECT_BOX_CONTENT = "선택하세요";
 
 const handleCategorySwitcher = () => {
   const switcher = document.querySelector("#sign-switcher");
@@ -7,12 +10,15 @@ const handleCategorySwitcher = () => {
 
 const switchCategory = (e) => {
   const categories = getCategories(e.currentTarget.checked);
-  const categoryElements = createCategoryElements(categories);
-
   const dropdown = document.querySelector(
     ".input-bar__item--category .dropdown"
   );
+  const categoryElements = createCategoryElements(categories);
   const originCategories = dropdown.firstElementChild;
+
+  updateSelectBox(dropdown, INITIAL_SELECT_BOX_CONTENT);
+  deactivateSelectBox(dropdown);
+  
   dropdown.replaceChild(categoryElements, originCategories);
 };
 

@@ -76,6 +76,7 @@
 - 분류
     - [x] 모든 드롭다운에 동일하게 적용시키기
     - [x] 수입, 지출에 따라 다른 목록 보여주기(~3/16 목요일)
+    - [x] 목록 교체하면 셀렉트 박스 초기화하기
 - 생성
   - [ ] 입력값을 검증
   - [ ] 검증을 통과하면 활성화함(~~~0315 수요일~~)
@@ -160,5 +161,25 @@ text를 감싸고 있는 요소들도 만들어줘야 하기 때문에 append의
 dropdown 자식으로 ul로 아이템들이 감싸져있어서 이걸 통째로 교체해줌.
 li 하나하나 remove & append 하는것보다 효율이 좋아보였음.
 
+
+</details>
+
+<details>
+<summary>카테고리 메뉴 변경될 때, 셀렉트 박스 초기화하기</summary>
+
+이미 dropdown node를 잡아놨는데, 그 앞의 node(셀렉트 박스)를 가져올 순 없을까?
+-> previousElementNode
+-> nextElementNode도 있음
+
+초기화 과정
+- 셀렉트 박스 p.textContent = '선택하세요'
+
+
+문제
+- 드롭다운 메뉴(item)에 이벤트가 걸려있음 -> 드롭다운에 걸어서 이벤트 위임하기
+- 드롭다운+content 인자로 받아서 셀렉트 박스 내용 변경하는 함수로 수정
+- 금액 부호 변경할 때, 분류 셀렉트 박스 active로 바뀜
+  - updateSelectBox에 active 추가하는 코드가 들어있음
+  - activate/deactivate 함수로 나누고 deactivate invoke
 
 </details>
