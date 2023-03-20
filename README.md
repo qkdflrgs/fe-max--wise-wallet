@@ -1,14 +1,6 @@
 # 가계부 서비스 #1
 
-## 체크리스트
-
-<details>
-<summary>구현 요소 구조도</summary>
-
-![가계부 기능](https://user-images.githubusercontent.com/60080167/223045069-169bbf61-90bb-4807-9d3b-d7a5cefbd2f6.png)
-</details>
-
-<br>
+## ✅체크리스트
 
 ### 메인 페이지 UI
 1. 헤더(header)
@@ -81,7 +73,7 @@
   - [ ] 입력값을 검증
   - [ ] 검증을 통과하면 활성화함(~~~0315 수요일~~)
 
-## 학습 계획
+## 📅학습 계획
 
 ### Week #1
 
@@ -100,7 +92,16 @@
 - 디버깅 방법
 - native 객체에서 prototype 활용 방식
 
-## 학습 정리
+### Week #3
+
+- scope와 클로저의 개념 알아보기
+- 샘플 코드를 디버깅하며 scope, 클로저가 적용되는 것을 확인하기
+- 각 입력값들을 모두 검증하고 완료되면 확인 버튼 활성화하기
+- 내역 데이터를 localStorage에 저장하기(~수요일)
+- 내역 수정, 삭제
+- 달별 내역 보여주기(~주말)
+
+## 📚학습 정리
 
 ### 2주차
 
@@ -108,7 +109,9 @@ Event target vs currentTarget
 - target은 이벤트가 발생한 바로 그 객체
 - currentTarget은 현재 이벤트 핸들러가 등록된 개체(요소)
 
-## 삽질한 것들
+### 3주차
+
+## 😭🤪삽질한 것들
 
 ### 1주차
 
@@ -126,6 +129,8 @@ Event target vs currentTarget
   - Event delegation, currentTarget 적용해서 모든 드롭다운에 적용되는 코드로 다시 작성함
   - 함수 이름 단순하게 지으니 훨씬 가독성이 올라감
   - export 필요없이 해당 파일에서 실행하고 모듈 js파일에서 import 만 해주면 동작함
+
+### 3주차
 
 ## 구현 과정
 
