@@ -111,6 +111,10 @@ Event target vs currentTarget
 
 ### 3주차
 
+querySelector 메서드
+- document 외의 요소에서도 사용할 수 있음
+- 해당 요소에서부터 탐색하기 때문에 전체 DOM 트리에서 탐색하는 것보다 빠름
+
 ## 😭🤪삽질한 것들
 
 ### 1주차
@@ -131,6 +135,10 @@ Event target vs currentTarget
   - export 필요없이 해당 파일에서 실행하고 모듈 js파일에서 import 만 해주면 동작함
 
 ### 3주차
+
+- 하나의 요소에 2개의 클래스명이 있을 때, css selector 사용 방법
+  - active 클래스명을 추가해서 버튼을 활성화할 때 자주사용하는데, 적용이 되지 않아서 고생함
+  - .a.b 처럼 띄어쓰기 없이 사용해야 css가 적용됨
 
 ## 구현 과정
 
@@ -198,4 +206,6 @@ input과 select-box를 모두 감싸는 form 태그가 있어서 이걸 사용�
 1. select-box p 태그를 input으로 교체
 2. 모든 input 값의 유효성을 검사 => 하나라도 유효값이 아니면 함수 종료
 3. 확인 버튼 활성화
+
+active 클래스명을 추가해줘도 css 적용이 안 되서 한참 헤맴.
 </details>

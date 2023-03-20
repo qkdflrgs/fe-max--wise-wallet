@@ -1,4 +1,4 @@
-import { getCategories } from "../../contants/categories.js";
+import { getCategories } from "../../constants/categories.js";
 import { deactivateSelectBox, updateSelectBox } from "./dropdown.js";
 
 const INITIAL_SELECT_BOX_CONTENT = "선택하세요";
@@ -29,15 +29,15 @@ const createCategoryElements = (categories) => {
 };
 
 const createItem = (category) => {
-  const text = document.createElement("p");
-  text.textContent = category;
-
-  const content = document.createElement("div");
-  content.className = "dropdown-item__content";
-  content.appendChild(text);
-
   const item = document.createElement("li");
+  const content = document.createElement("div");
+  const text = document.createElement("p");
+  
   item.className = "dropdown-item";
+  content.className = "dropdown-item__content";
+  text.textContent = category;
+  
+  content.appendChild(text);
   item.appendChild(content);
 
   return item;

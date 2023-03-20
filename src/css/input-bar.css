@@ -212,3 +212,11 @@
   align-items: stretch;
   opacity: 0.4;
 }
+
+.input-bar__check-button.active {
+  opacity: 1;
+}
+
+.input-bar__check-button.active:hover {
+  cursor: pointer;
+}
