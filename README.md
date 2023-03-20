@@ -186,5 +186,16 @@ li 하나하나 remove & append 하는것보다 효율이 좋아보였음.
 - 금액 부호 변경할 때, 분류 셀렉트 박스 active로 바뀜
   - updateSelectBox에 active 추가하는 코드가 들어있음
   - activate/deactivate 함수로 나누고 deactivate invoke
+</details>
 
+<details>
+<summary>인풋바의 모든 입력값이 유효할 때 확인 버튼 활성화하기</summary>
+
+각 값을 검증하는 함수는 나중에 생각하고, 모든 함수를 호출할 타이밍은 언제가 되야하나?
+또 해당 이벤트를 설정할 요소는 어디여야 할까?
+input과 select-box를 모두 감싸는 form 태그가 있어서 이걸 사용하는게 적절해보인다.
+
+1. select-box p 태그를 input으로 교체
+2. 모든 input 값의 유효성을 검사 => 하나라도 유효값이 아니면 함수 종료
+3. 확인 버튼 활성화
 </details>

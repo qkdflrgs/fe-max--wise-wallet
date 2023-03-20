@@ -3,6 +3,7 @@ const initDropdown = () => {
   const dropdowns = document.querySelectorAll(".dropdown");
 
   selectBoxes.forEach((s) => {
+    s.firstElementChild.disabled = true;
     s.addEventListener("click", toggleDropdown);
   });
   dropdowns.forEach((d) => {
@@ -57,7 +58,7 @@ const selectItem = (e) => {
 
 const updateSelectBox = (dropdown, content) => {
   const selectBox = dropdown.previousElementSibling;
-  selectBox.firstElementChild.textContent = content;
+  selectBox.firstElementChild.value = content;
 };
 
 const activateSelectBox = (dropdown) => {
@@ -70,6 +71,7 @@ const activateSelectBox = (dropdown) => {
 const deactivateSelectBox = (dropdown) => {
   const selectBox = dropdown.previousElementSibling;
   selectBox.classList.remove("selected");
+  updateSelectBox(dropdown, "");
 };
 
 export { initDropdown, updateSelectBox, deactivateSelectBox };
