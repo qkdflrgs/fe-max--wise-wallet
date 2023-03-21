@@ -11,4 +11,6 @@ const getDateInfo = () => {
   };
 };
 
-export { getNumberWithPreZeros, getDateInfo };
+const getNumberWithoutComma = (numberStr) => parseInt(numberStr.replaceAll(",", ""));
+
+export { getNumberWithPreZeros, getDateInfo, getNumberWithoutComma };

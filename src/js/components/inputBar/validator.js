@@ -1,7 +1,9 @@
 import { PAYMENT_TYPES } from "../../constants/paymentTypes.js";
 import { getCategories } from "../../constants/categories.js";
+import { getNumberWithoutComma } from "../../utils/utils.js";
 
 const inputBar = document.querySelector(".input-bar");
+const checkButton = inputBar.querySelector(".input-bar__check-button");
 
 const isValidDate = () => {
   const date = inputBar.querySelector("#input-date").value;
@@ -33,11 +35,21 @@ const isValidCategory = () => {
 
 const checkAllInputValues = () => {
   if (isValidDate() && isValidPrice() && isValidContent() && isValidPayment() && isValidCategory()) {
-    const checkButton = inputBar.querySelector('.input-bar__check-button');
-    checkButton.classList.toggle('active');
+    checkButton.classList.toggle("active");
   }
 };
+
+const saveInOutcome = () => {
+  const inOutcome = {
+    date: inputBar.querySelector("#input-date").value,
+    price: getNumberWithoutComma(inputBar.querySelector("#input-price").value),
+    isOutcome: inputBar.querySelector("#sign-switcher").checked,
+    paymentType: inputBar.querySelector("#input-payment-type").value,
+    category: inputBar.querySelector("#input-category").value,
+  }
+}
 
 // inputBar.addEventListener("click", checkAllInputValues);
 inputBar.addEventListener("input", checkAllInputValues);
 inputBar.addEventListener("click", checkAllInputValues);
+checkButton.addEventListener('click', saveInOutcome);
