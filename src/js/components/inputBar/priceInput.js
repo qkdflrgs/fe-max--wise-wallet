@@ -5,7 +5,7 @@ const initDefaultPrice = () => {
 };
 
 const handlePriceInputEvent = (e) => {
-  const number = Number(e.target.value.replace(/[^0-9]/g, ''));
+  const number = Number(e.target.value.replace(/[^0-9]/g, ""));
   priceInput.value = number.toLocaleString();
 };
 
@@ -13,4 +13,6 @@ const addPriceInputEventListener = () => {
   priceInput.addEventListener("input", handlePriceInputEvent);
 };
 
-export { initDefaultPrice, addPriceInputEventListener };
+addPriceInputEventListener();
+
+export { initDefaultPrice };

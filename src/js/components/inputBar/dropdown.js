@@ -1,8 +1,9 @@
-const handleDropdown = () => {
+const initDropdown = () => {
   const selectBoxes = document.querySelectorAll(".select-box");
   const dropdowns = document.querySelectorAll(".dropdown");
 
   selectBoxes.forEach((s) => {
+    s.firstElementChild.disabled = true;
     s.addEventListener("click", toggleDropdown);
   });
   dropdowns.forEach((d) => {
@@ -13,6 +14,7 @@ const handleDropdown = () => {
 };
 
 const toggleDropdown = (e) => {
+  e.preventDefault();
   e.stopPropagation();
 
   if (!isActiveDropdown(e)) {
@@ -38,9 +40,7 @@ const hideActiveDropdown = () => {
   });
 };
 
-const isActiveDropdown = (e) =>
-  e.target.closest(".select-box.active") ||
-  e.target.closest(".dropdown.active");
+const isActiveDropdown = (e) => e.target.closest(".select-box.active") || e.target.closest(".dropdown.active");
 
 const selectItem = (e) => {
   const item = e.target.closest(".dropdown-item");
@@ -58,7 +58,7 @@ const selectItem = (e) => {
 
 const updateSelectBox = (dropdown, content) => {
   const selectBox = dropdown.previousElementSibling;
-  selectBox.firstElementChild.textContent = content;
+  selectBox.firstElementChild.value = content;
 };
 
 const activateSelectBox = (dropdown) => {
@@ -66,12 +66,12 @@ const activateSelectBox = (dropdown) => {
   if (!selectBox.classList.contains("selected")) {
     selectBox.classList.add("selected");
   }
-}
+};
 
 const deactivateSelectBox = (dropdown) => {
   const selectBox = dropdown.previousElementSibling;
-  selectBox.classList.remove('selected');
-}
+  selectBox.classList.remove("selected");
+  updateSelectBox(dropdown, "");
+};
 
-handleDropdown();
-export { updateSelectBox, deactivateSelectBox };
+export { initDropdown, updateSelectBox, deactivateSelectBox };

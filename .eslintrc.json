@@ -13,6 +13,7 @@
     "rules": {
         "linebreak-style": ["error", "windows"],
         "import/prefer-default-export": "off",
-        "quotes": [1, "single", { "avoidEscape": true }]
+        "quotes": [1, "single", { "avoidEscape": true }],
+        "max-len": ["error", { "code": 150 }]
     }
 }
